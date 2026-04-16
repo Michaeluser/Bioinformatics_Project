@@ -1,0 +1,4 @@
+[2026-04-16T01:47:55.629383Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:fixVcfHeader_sortDiploidSV] [wrapperSignal] wrapperStart
+[2026-04-16T01:47:55.651719Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:fixVcfHeader_sortDiploidSV] [wrapperSignal] taskStart
+[2026-04-16T01:47:55.682019Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:fixVcfHeader_sortDiploidSV] [wrapperSignal] taskExitCode 0
+[2026-04-16T01:47:55.697333Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:fixVcfHeader_sortDiploidSV] [wrapperSignal] taskElapsedSec 0

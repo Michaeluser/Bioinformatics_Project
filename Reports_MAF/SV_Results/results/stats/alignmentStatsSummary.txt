@@ -1,0 +1,36 @@
+group:	/home/azureuser_michael/Data/Post_Processing/CA.bam
+fragment length observations:	1599206
+fragment length quantiles:
+0.01	120
+0.05	140
+0.1	153
+0.25	180
+0.5	224
+0.75	282
+0.9	348
+0.95	396
+0.99	506
+Total sampled reads:	4254739
+Total sampled paired reads:	4254739
+Total sampled unpaired reads:	0
+Total sampled paired reads with low MAPQ:	219794
+Total sampled high-confidence read pairs passing all filters:	1600507
+
+group:	/home/azureuser_michael/Data/Post_Processing/TA.bam
+fragment length observations:	2098963
+fragment length quantiles:
+0.01	119
+0.05	137
+0.1	148
+0.25	169
+0.5	207
+0.75	263
+0.9	324
+0.95	367
+0.99	471
+Total sampled reads:	5856139
+Total sampled paired reads:	5856139
+Total sampled unpaired reads:	0
+Total sampled paired reads with low MAPQ:	324821
+Total sampled high-confidence read pairs passing all filters:	2100279
+

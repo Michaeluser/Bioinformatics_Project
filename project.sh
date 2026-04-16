@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e  #exit on first error
+
 #PATH VARIABLES
 CR1="Data/Data_QC/P14.C_R1.fastq.gz" #control sample R1
 CR2="Data/Data_QC/P14.C_R2.fastq.gz" #control sample R2
@@ -21,7 +23,9 @@ CS_M="Data/Post_Processing/CA_marked.bam"
 TS_M="Data/Post_Processing/TA_marked.bam"
 
 HG_38="Data/Read_Alignment/hg_38.fa" #human reference genome
-HG_38_GZ="Data/Read_Alignment/hg_38.fa.gz"
+HG_38_GZ="Data/Read_Alignment/hg_38.fa.gz" #compressed reference genome
+HG_38_IDX="Data/Read_Alignment/hg_38.fai" #indexed reference genome
+HG_38_RD="Data/Read_Alignment/hg_38.dict" #reference genome dictionary
 
 DBSNP="Data/Post_Processing/dbsnp.vcf" #dbsnp variant calling data
 DBSNP_IDX="Data/Post_Processing/dbsnp.vcf.idx" #dbsnp index table
@@ -39,7 +43,7 @@ if [ "$1" == "-s" ] && [ "$2" == "1" ]; then
 
 	#setup Miniforge
 	if [ ! -d "$HOME/Utils/miniforge3" ]; then
-	    echo "Installing Miniforge..."
+	    echo "[INSTALLING] Miniforge"
 	    curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh"
 	    bash Miniforge3-Linux-x86_64.sh -b -p "$HOME/Utils/miniforge3"
 	    rm Miniforge3-Linux-x86_64.sh
@@ -50,16 +54,16 @@ if [ "$1" == "-s" ] && [ "$2" == "1" ]; then
 
 	#installation function
 	install_tool() {
-	    if ! command -v "$1" &> /dev/null; then
+	    if [ ! command -v "$1" &> /dev/null ]; then
 	        echo "[INSTALLING] $1"
 	        conda install -y bioconda::"$1"
 	    else
-	        echo "[SKIP] $1 is already installed."
+	        echo "[SKIP] - $1 is already installed."
 	    fi
 	}
 
 	#install tools
-	for tool in seqtk seqkit samtools fastqc bwa fastp qualimap gatk4 manta cnvkit; do
+	for tool in seqtk seqkit samtools fastqc bwa fastp qualimap gatk4 manta cnvkit igv; do
 	    install_tool "$tool"
 	done
 
@@ -186,17 +190,31 @@ echo "Data Cleaning Stage (Post-Processing)"
 
 #curl files needed for quality recalibration
 if [ ! -f "$DBSNP" ]; then
-    curl -L "https://storage.googleapis.com/genomics-public-data/resources/broad/hg38/v0/Homo_sapiens_assembly38.dbsnp138.vcf" -o $DBSNP
+    curl -L "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/Homo_sapiens_assembly38.dbsnp138.vcf" -o $DBSNP
 fi
 if [ ! -f "$DBSNP_IDX" ]; then
-    curl -L "https://storage.googleapis.com/genomics-public-data/resources/broad/hg38/v0/Homo_sapiens_assembly38.dbsnp138.vcf.idx" -o $DBSNP_IDX
+    curl -L "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/Homo_sapiens_assembly38.dbsnp138.vcf.idx" -o $DBSNP_IDX
 fi
 if [ ! -f "$HGV" ]; then
-    curl -L "https://storage.googleapis.com/gatk-best-practices/somatic-hg38/small_exac_common_3.hg38.vcf.gz" -o $HGV
+    curl -L "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/somatic-hg38/small_exac_common_3.hg38.vcf.gz" -o $HGV
 fi
 if [ ! -f "$HGV_IDX" ]; then
-    curl -L "https://storage.googleapis.com/gatk-best-practices/somatic-hg38/small_exac_common_3.hg38.vcf.gz.tbi" -o $HGV_IDX
+    curl -L "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/somatic-hg38/small_exac_common_3.hg38.vcf.gz.tbi" -o $HGV_IDX
 fi
+
+#generate all necessary files
+if [ ! -f $HG_38_IDX ]; then
+    samtools faidx $HG_38 > $HG_38_IDX
+fi
+
+if [ ! -f $HG_38_RD ]; then
+    samtools dict $HG_38 > $HG_38_RD
+fi
+
+sed '/^[^#]/ s/^/chr/' $DBSNP > ~/Data/Post_Processing/dbsnp_chr.vcf
+mv ~/Data/Post_Processing/dbsnp_chr.vcf $DBSNP
+gatk IndexFeatureFile -I $DBSNP
+
 
 #raw duplicates
 #I - aligned input

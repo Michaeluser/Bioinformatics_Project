@@ -1,0 +1,4 @@
+[2026-04-16T01:47:55.944551Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:tabix_sortDiploidSV] [wrapperSignal] wrapperStart
+[2026-04-16T01:47:55.962001Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:tabix_sortDiploidSV] [wrapperSignal] taskStart
+[2026-04-16T01:47:55.986102Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:tabix_sortDiploidSV] [wrapperSignal] taskExitCode 0
+[2026-04-16T01:47:56.003474Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:tabix_sortDiploidSV] [wrapperSignal] taskElapsedSec 0

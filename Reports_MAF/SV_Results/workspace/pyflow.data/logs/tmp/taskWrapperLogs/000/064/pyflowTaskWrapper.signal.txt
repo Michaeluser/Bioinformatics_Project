@@ -1,0 +1,4 @@
+[2026-04-16T01:44:31.435363Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:getChromDepth_sample000_estimateChromDepth_064_chr1_KI270766v1_alt] [wrapperSignal] wrapperStart
+[2026-04-16T01:44:31.450806Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:getChromDepth_sample000_estimateChromDepth_064_chr1_KI270766v1_alt] [wrapperSignal] taskStart
+[2026-04-16T01:44:31.483425Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:getChromDepth_sample000_estimateChromDepth_064_chr1_KI270766v1_alt] [wrapperSignal] taskExitCode 0
+[2026-04-16T01:44:31.491872Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:getChromDepth_sample000_estimateChromDepth_064_chr1_KI270766v1_alt] [wrapperSignal] taskElapsedSec 0

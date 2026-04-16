@@ -1,0 +1,4 @@
+[2026-04-16T01:47:31.419332Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:mergeLocusGraph] [wrapperSignal] wrapperStart
+[2026-04-16T01:47:31.430116Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:mergeLocusGraph] [wrapperSignal] taskStart
+[2026-04-16T01:47:31.795649Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:mergeLocusGraph] [wrapperSignal] taskExitCode 0
+[2026-04-16T01:47:31.810552Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:mergeLocusGraph] [wrapperSignal] taskElapsedSec 0

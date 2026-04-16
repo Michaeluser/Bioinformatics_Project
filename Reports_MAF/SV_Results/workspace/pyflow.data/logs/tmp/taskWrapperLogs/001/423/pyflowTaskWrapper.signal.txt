@@ -1,0 +1,4 @@
+[2026-04-16T01:47:31.900323Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:removeTmpDir] [wrapperSignal] wrapperStart
+[2026-04-16T01:47:31.912767Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:removeTmpDir] [wrapperSignal] taskStart
+[2026-04-16T01:47:31.954046Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:removeTmpDir] [wrapperSignal] taskExitCode 0
+[2026-04-16T01:47:31.974053Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:removeTmpDir] [wrapperSignal] taskElapsedSec 0

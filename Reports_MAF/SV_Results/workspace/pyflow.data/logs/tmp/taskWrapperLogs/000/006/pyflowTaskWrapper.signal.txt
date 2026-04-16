@@ -1,0 +1,4 @@
+[2026-04-16T01:43:41.975370Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:getChromDepth_makeTmpDir] [wrapperSignal] wrapperStart
+[2026-04-16T01:43:41.990882Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:getChromDepth_makeTmpDir] [wrapperSignal] taskStart
+[2026-04-16T01:43:41.999435Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:getChromDepth_makeTmpDir] [wrapperSignal] taskExitCode 0
+[2026-04-16T01:43:42.009060Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:getChromDepth_makeTmpDir] [wrapperSignal] taskElapsedSec 0

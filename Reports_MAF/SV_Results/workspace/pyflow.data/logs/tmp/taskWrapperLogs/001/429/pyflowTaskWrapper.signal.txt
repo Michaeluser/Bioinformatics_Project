@@ -1,0 +1,4 @@
+[2026-04-16T01:47:55.759152Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:sort_sortCandidateSV] [wrapperSignal] wrapperStart
+[2026-04-16T01:47:55.771185Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:sort_sortCandidateSV] [wrapperSignal] taskStart
+[2026-04-16T01:47:55.857707Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:sort_sortCandidateSV] [wrapperSignal] taskExitCode 0
+[2026-04-16T01:47:55.873848Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:sort_sortCandidateSV] [wrapperSignal] taskElapsedSec 0

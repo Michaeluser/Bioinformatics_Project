@@ -1,0 +1,4 @@
+[2026-04-16T01:44:17.659454Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:summarizeStats] [wrapperSignal] wrapperStart
+[2026-04-16T01:44:17.674147Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:summarizeStats] [wrapperSignal] taskStart
+[2026-04-16T01:44:17.689865Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:summarizeStats] [wrapperSignal] taskExitCode 0
+[2026-04-16T01:44:17.698785Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:summarizeStats] [wrapperSignal] taskElapsedSec 0

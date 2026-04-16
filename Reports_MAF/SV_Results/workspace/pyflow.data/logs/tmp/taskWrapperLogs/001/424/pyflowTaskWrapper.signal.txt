@@ -1,0 +1,4 @@
+[2026-04-16T01:47:31.904247Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:locusGraphStats] [wrapperSignal] wrapperStart
+[2026-04-16T01:47:31.916813Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:locusGraphStats] [wrapperSignal] taskStart
+[2026-04-16T01:47:31.953419Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:locusGraphStats] [wrapperSignal] taskExitCode 0
+[2026-04-16T01:47:31.974066Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:locusGraphStats] [wrapperSignal] taskElapsedSec 0
