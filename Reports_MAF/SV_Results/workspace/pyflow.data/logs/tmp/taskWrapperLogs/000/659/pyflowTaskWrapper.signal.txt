@@ -1,4 +1,0 @@
-[2026-04-16T01:47:13.573341Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:makeLocusGraph_chromId_005_chr13_0008] [wrapperSignal] wrapperStart
-[2026-04-16T01:47:13.588551Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:makeLocusGraph_chromId_005_chr13_0008] [wrapperSignal] taskStart
-[2026-04-16T01:47:15.225429Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:makeLocusGraph_chromId_005_chr13_0008] [wrapperSignal] taskExitCode 0
-[2026-04-16T01:47:15.235615Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:makeLocusGraph_chromId_005_chr13_0008] [wrapperSignal] taskElapsedSec 1

@@ -1,4 +1,0 @@
-[2026-04-16T01:47:55.941136Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:tabix_sortSomaticSV] [wrapperSignal] wrapperStart
-[2026-04-16T01:47:55.954973Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:tabix_sortSomaticSV] [wrapperSignal] taskStart
-[2026-04-16T01:47:55.973046Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:tabix_sortSomaticSV] [wrapperSignal] taskExitCode 0
-[2026-04-16T01:47:55.981761Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:tabix_sortSomaticSV] [wrapperSignal] taskElapsedSec 0

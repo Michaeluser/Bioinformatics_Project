@@ -1,4 +1,0 @@
-[2026-04-16T01:47:56.065052Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:extractSmallIndels_tabix] [wrapperSignal] wrapperStart
-[2026-04-16T01:47:56.076452Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:extractSmallIndels_tabix] [wrapperSignal] taskStart
-[2026-04-16T01:47:56.104600Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:extractSmallIndels_tabix] [wrapperSignal] taskExitCode 0
-[2026-04-16T01:47:56.116519Z] [bioinformatics-vm.internal.cloudapp.net] [14644_1] [pyflowTaskWrapper:extractSmallIndels_tabix] [wrapperSignal] taskElapsedSec 0
