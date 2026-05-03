@@ -1,215 +1,67 @@
 POST-ALIGNMENT QUALITY CONTROL REPORT
 
-This report summarizes alignment statistics for control (CS) and tumor (TS) samples following alignment to the reference human genome.
+This report summarizes alignment statistics for control (CS) and tumor (TS) samples following alignment to the reference human genome. Alignment was performed using paired-end sequencing data against the hg38 reference genome (~3.3 billion base pairs) using 4 threads. Coverage analysis was conducted at a resolution of 400 genomic windows with a homopolymer threshold of 3 for indel detection. Duplicates were not removed prior to analysis.
 
-================================================================================
-SAMPLE-SPECIFIC ALIGNMENT STATISTICS
-================================================================================
 
---------------------------------------------------------------------------------
-CONTROL SAMPLE (CS)
---------------------------------------------------------------------------------
 
-Total reads: 23,948,283
-The dataset contains ~24 million reads, indicating sufficient sequencing depth for downstream analysis.
 
-Mapping rate: 99.97%
-An extremely high proportion of reads successfully aligned to the reference genome. This indicates:
-- High sequencing quality
-- Minimal contamination
-- Good compatibility between reads and reference genome
 
-Properly paired reads: 99.23%
-The vast majority of paired-end reads are correctly aligned with expected orientation and insert size. This suggests:
-- Accurate library preparation
-- Reliable structural integrity of reads
+Control sample (CS)
+Total reads: The dataset contains 23,948,283 reads (~24 million), indicating sufficient sequencing depth for downstream analysis.
+Mapping rate: 99.97% of reads successfully aligned to the reference genome, indicating high sequencing quality, minimal contamination, and strong compatibility with the reference.
+Properly paired reads: 99.23% of paired-end reads are correctly aligned with expected orientation and insert size, suggesting accurate library preparation and reliable structural integrity of reads.
+Singletons: 0.03% of reads have only one mate aligned. This negligible fraction indicates minimal fragmentation or mapping inconsistency.
+Reads mapped to different chromosomes: 87,956 reads (~0.37%) have pairs mapping to different chromosomes. After filtering for mapping quality (mapQ >= 5), this reduces to 76,711. These may reflect minor structural variation, alignment ambiguity in repetitive regions, or low-level technical noise.
+Secondary alignments: 18,591 reads map to multiple locations, which is expected in repetitive genomic regions.
+Duplicates: No duplicates are reported at this stage as duplicate marking has not yet been performed and is scheduled for the post-processing step.
 
-Singletons: 0.03%
-A negligible fraction of reads have only one mate aligned. This low value indicates minimal fragmentation or mapping inconsistency.
+Overall interpretation: The control sample demonstrates excellent alignment quality, with high mapping efficiency, strong pairing consistency, and minimal anomalies. The dataset is fully suitable for downstream variant calling.
 
-Reads mapped to different chromosomes: 87,956 (~0.37%)
-Reads whose pairs map to different chromosomes are present at a low level. After filtering for mapping quality (mapQ >= 5), this reduces to 76,711.
-This may indicate:
-- Minor structural variation
-- Alignment ambiguity in repetitive regions
-- Low-level technical noise
 
-Secondary alignments: 18,591
-A small number of reads map to multiple locations, which is expected in repetitive genomic regions.
 
-Duplicates: 0
-No duplicates reported at this stage (likely not yet marked). Duplicate marking should be performed in downstream processing.
 
-Overall interpretation:
-The control sample demonstrates excellent alignment quality, with high mapping efficiency, strong pairing consistency, and minimal anomalies. The dataset is suitable for downstream analyses such as variant calling or expression analysis.
 
---------------------------------------------------------------------------------
-TUMOR SAMPLE (TS)
---------------------------------------------------------------------------------
 
-Total reads: 34,639,454
-The tumor dataset contains ~34.6 million reads, providing higher sequencing depth than the control.
+Tumor sample (TS)
+Total reads: The dataset contains 34,639,454 reads (~34.6 million), providing higher sequencing depth than the control.
+Mapping rate: 99.98% of reads successfully aligned to the reference genome, confirming high read quality and strong compatibility with the reference.
+Properly paired reads: 99.34% of reads are properly paired, marginally higher than in the control sample, indicating robust alignment performance.
+Singletons: 0.02% of reads have only one mate aligned, suggesting minimal mapping inconsistencies.
+Reads mapped to different chromosomes: 83,864 reads (~0.24%) have pairs mapping to different chromosomes. After quality filtering (mapQ >= 5), this reduces to 71,073. Compared to the control, this value is slightly lower but still within the expected range. These reads may reflect structural rearrangements, repetitive sequence regions, or alignment ambiguity.
+Secondary alignments: 16,136 reads map to multiple locations, consistent with genomic repeats.
+Duplicates: No duplicates are reported at this stage. Duplicate marking is required in the post-processing step.
 
-Mapping rate: 99.98%
-Alignment success is extremely high, confirming:
-- High read quality
-- Strong compatibility with the reference genome
+Overall interpretation: The tumor sample exhibits excellent alignment metrics, with slightly improved pairing statistics compared to the control. High mapping rates and low singleton fractions confirm strong data quality. Minor interchromosomal mappings may reflect biological variation or alignment ambiguity.
 
-Properly paired reads: 99.34%
-A very high proportion of reads are properly paired, slightly higher than in the control sample. This indicates robust alignment performance.
 
-Singletons: 0.02%
-Very low number of singletons, suggesting minimal mapping inconsistencies.
 
-Reads mapped to different chromosomes: 83,864 (~0.24%)
-After quality filtering (mapQ >= 5), this reduces to 71,073.
-Compared to the control sample, this value is slightly lower, but still within expected range. These reads may reflect:
-- Structural rearrangements
-- Repetitive sequence regions
-- Alignment ambiguity
 
-Secondary alignments: 16,136
-A modest number of multi-mapped reads, consistent with genomic repeats.
 
-Duplicates: 0
-No duplicates reported at this stage. Duplicate marking is required in later processing steps.
 
-Overall interpretation:
-The tumor sample exhibits excellent alignment metrics, with slightly improved pairing statistics compared to the control. High mapping rates and low singleton fractions confirm strong data quality. Minor interchromosomal mappings may reflect biological variation or alignment ambiguity.
 
-================================================================================
-COMPARATIVE SUMMARY
-================================================================================
+Global observations
+Both samples demonstrate near-identical alignment performance. Mapping rates exceed 99.9% in both cases, and properly paired read fractions remain above 99%. Singleton rates are negligible across both datasets. Interchromosomal mappings are low and comparable between samples. No duplicates are reported at this stage, as duplicate marking has not yet been performed.
+Conclusion: Both control and tumor datasets demonstrate high-quality alignment suitable for downstream bioinformatic analyses. Observed minor anomalies are within expected limits and do not indicate significant technical issues.
 
-- Both samples show extremely high mapping rates (>99.9%), indicating high-quality sequencing data.
-- Proper pairing is consistently above 99%, confirming reliable library preparation and alignment.
-- Singleton rates are negligible in both datasets.
-- Interchromosomal mappings are low and comparable between samples.
-- No duplicates are reported yet, suggesting duplicate marking has not been performed.
 
-Conclusion:
-Both control and tumor datasets demonstrate high-quality alignment suitable for downstream bioinformatic analyses. Observed minor anomalies are within expected limits and do not indicate significant technical issues. Further validation using post-alignment QC tools (e.g., Qualimap) is recommended to assess coverage uniformity, GC bias, and genomic distribution.
 
-================================================================================
-SEQUENCE BIAS AND BASE QUALITY
-================================================================================
 
-The mapped reads nucleotide content profile shows overall stability with expected technical artifacts at the beginning of reads.
+Sequence bias and base quality
+The mapped reads nucleotide content profile shows overall stability with expected technical artifacts at the beginning of reads. Noticeable variability in nucleotide percentages is observed within the first 10 base pairs, which is typical and attributed to non-random hexamer priming during library preparation. After position 10 bp, nucleotide composition stabilizes across the entire read length (~100 bp), with Adenine (A) and Thymine (T) remaining at approximately 26-27% and Guanine (G) and Cytosine (C) remaining at 23-24%. The proportion of undefined bases (N) is 0% across all positions, indicating very high base-calling accuracy.
 
-Initial fluctuations:
-Noticeable variability in nucleotide percentages is observed within the first 10 base pairs.
-This effect is typical and is attributed to non-random hexamer priming during library preparation.
 
-Long-term stability:
-After position 10 bp, nucleotide composition stabilizes across the entire read length (~100 bp).
-Adenine (A) and Thymine (T) remain at approximately 26-27%, while Guanine (G) and Cytosine (C) remain at 23-24%.
 
-Base-calling confidence:
-The proportion of undefined bases (N) is 0% across all positions, indicating very high base-calling accuracy.
+Duplication profile
+The overall duplication rate is 30.22%, corresponding to approximately 10.8 million duplicated reads. The majority of genomic loci (~16.5 million) have a duplication rate of 1, meaning they are covered by a single unique read. The duplication frequency then decreases rapidly, with ~5 million loci at a duplication rate of 2 and fewer than 1.5 million at a rate of 3. This exponential decay pattern indicates that duplicates are broadly distributed rather than concentrated, strongly suggesting PCR amplification artifacts rather than biological over-representation or contamination.
 
-================================================================================
-DUPLICATION PROFILE
-================================================================================
 
-The duplication rate histogram reveals the distribution and nature of duplicated reads.
 
-Overall duplication rate:
-30.22%, corresponding to approximately 10.8 million duplicated reads.
+Nucleotide composition and error metrics
+GC content is 47.28%, consistent with expected human genomic composition. The mean mapping quality is 20.62, indicating moderate confidence in alignment positions. The general error rate is 0.22%, reflecting low sequencing and alignment error frequency. A total of 102,906 insertions and 121,485 deletions were detected, with 45.15% of indels occurring in homopolymer regions. This is a known sequencing limitation and is not necessarily a biological signal.
 
-Primary distribution:
-The majority of genomic loci (~16.5 million) have a duplication rate of 1, meaning they are covered by a single unique read.
 
-Decay pattern:
-The duplication frequency decreases rapidly:
-- ~5 million loci have duplication rate = 2
-- <1.5 million loci have duplication rate = 3
 
-Interpretation:
-The exponential decay pattern indicates that duplicates are broadly distributed rather than concentrated.
-This strongly suggests PCR amplification artifacts rather than biological over-representation or contamination.
+Coverage and insert size analysis
+Mean genome-wide coverage is 1.04x with a standard deviation of 9.48, indicating low and highly uneven coverage distribution. The mean insert size is 7,232.76 bp while the median is 208 bp. The large discrepancy between mean and median insert size indicates the presence of extreme outliers, likely caused by structural variants such as large insertions or deletions, or alignment artifacts such as mis-mapped read pairs.
 
-================================================================================
-ALIGNMENT OVERVIEW AND PARAMETERS
-================================================================================
-
-Alignment was performed using paired-end sequencing data with the following parameters:
-
-Reference genome: hg38 (~3.3 billion base pairs)
-Threads used: 4
-Coverage analysis resolution: 400 genomic windows
-Homopolymer threshold: 3 (used for indel detection)
-Duplicate handling: duplicates were not removed prior to analysis
-
-================================================================================
-MAPPING STATISTICS
-================================================================================
-
-The dataset demonstrates extremely high mapping efficiency.
-
-Total reads: 34,623,318
-Mapped reads: 34,614,791 (99.98%)
-Unmapped reads: 8,527 (0.02%)
-Secondary alignments: 16,136
-
-Interpretation:
-The near-complete mapping rate indicates:
-- High sequencing quality
-- Strong compatibility with the reference genome
-- Minimal contamination
-
-================================================================================
-NUCLEOTIDE COMPOSITION AND ERROR METRICS
-================================================================================
-
-GC content: 47.28%
-Consistent with expected human genomic composition.
-
-Mean mapping quality: 20.62
-Indicates moderate confidence in alignment positions.
-
-General error rate: 0.22%
-Reflects low sequencing and alignment error frequency.
-
-Indels:
-- Insertions: 102,906
-- Deletions: 121,485
-- Homopolymer-associated indels: 45.15%
-
-Interpretation:
-A substantial fraction of indels occurs in homopolymer regions, which is a known sequencing limitation and not necessarily a biological signal.
-
-================================================================================
-COVERAGE AND INSERT SIZE ANALYSIS
-================================================================================
-
-Coverage and fragment size analysis reveal variability in sequencing characteristics.
-
-Mean coverage: 1.0364x
-Indicates low average genome-wide coverage.
-
-Coverage standard deviation: 9.48
-Suggests highly uneven coverage distribution.
-
-Insert size:
-- Mean: 7,232.76 bp
-- Median: 208 bp
-
-Interpretation:
-The large discrepancy between mean and median insert size indicates the presence of extreme outliers.
-These outliers are likely caused by:
-- Structural variants (e.g., large insertions/deletions)
-- Alignment artifacts (e.g., mis-mapped read pairs)
-
-================================================================================
-OVERALL INTERPRETATION
-================================================================================
-
-- Sequencing quality is high, with stable nucleotide composition and no undefined bases.
-- Mapping efficiency is near-perfect, confirming high data integrity.
-- Duplication rate is elevated but consistent with PCR amplification rather than contamination.
-- Coverage is low and uneven, which may limit sensitivity in downstream analyses.
-- Insert size distribution suggests the presence of significant outliers, likely technical artifacts or structural variation signals.
-
-================================================================================
-END OF REPORT
-================================================================================
+Overall interpretation: Sequencing quality is high, with stable nucleotide composition and no undefined bases. Mapping efficiency is near-perfect, confirming high data integrity. The duplication rate is elevated but consistent with PCR amplification rather than contamination. Coverage is low and uneven, which may limit sensitivity in downstream analyses. The insert size distribution suggests the presence of significant outliers, likely reflecting technical artifacts or structural variation signals.

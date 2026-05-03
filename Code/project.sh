@@ -39,7 +39,7 @@ set -e  #exit on first error
 
 #PATH VARIABLES
 
-#intermediate computation paths
+#Intermediate computation paths
 SV_P="$HOME/Data/Variant_Calling/SV_Results" #structural variants results
 CNV_P="$HOME/Data/Variant_Calling/CNV_Results/" #copy number variations results
 SNP_P="$HOME/Data/Variant_Calling/SNP_Results/" #single nucleotide polymorphism results
@@ -84,14 +84,14 @@ SNP_VC="$HOME/Data/Variant_Calling/SNP_Results/filtered_somatic.vcf" # filtered 
 #CNVkit output files
 CNV_VCF="$HOME/Data/Variant_Calling/CNV_Results/cnv_occurences.vcf" #CNVkit VCF format
 CVR="$HOME/Data/Variant_Calling/CNV_Results/cnv_reheaded.vcf" #CNVkit VCF file Reheaded, with header changed to proper one (the file has been reheaded, meaning contig lines were added)
-CNV_VC="$HOME/Data/Variant_Calling/CNV_Results/cnvo_sorted.vcf" #Sorted CNV VCF file
+CNV_VC="$HOME/Data/Variant_Calling/CNV_Results/cnvo_sorted.vcf" #Sorted CNV VCF file, final one
 
-CNV_CNS="$HOME/Data/Variant_Calling/CNV_Results/TA.call.cns" #CNVkit segmented calls for tumor
+CNV_CNS="$HOME/Data/Variant_Calling/CNV_Results/TA.call.cns" #CNVkit segmented calls for tumor, final one
 
 
 
 #Manta output files
-SV_VC="$HOME/Data/Variant_Calling/SV_Results/results/variants/somaticSV.vcf" #Manta somatic SV output
+SV_VC="$HOME/Data/Variant_Calling/SV_Results/results/variants/somaticSV.vcf" #Manta somatic SV output, final one
 
 
 
@@ -117,7 +117,6 @@ HGV="$HOME/Data/Post_Processing/small_exac_common_3.hg38.vcf.gz" #human genome v
 HGV_IDX="$HOME/Data/Post_Processing/small_exac_common_3.hg38.vcf.gz.tbi" #human genome variants data
 
 FUNC_DB="$HOME/Data/Gleaning_Annotation/funcotator_dataSources.v1.8.hg38.20230908s" #Funcotator database path
-ADB="$HOME/Data/Gleaning_Annotation/Annotations/v3.5.2.tar.gz"
 
 if [[ "$*" == *"-s"* ]]; then
 
@@ -214,13 +213,6 @@ if [[ "$*" == *"-s"* ]]; then
 			rm $HOME/Data/Gleaning_Annotation/Resources
 		fi
 
-		#download annotation databases for AnnotSV
-		if [ "$ADB" ]; then
-			curl -L "https://github.com/lgmgeo/AnnotSV/archive/refs/tags/v3.5.2.tar.gz" -o "$HOME/Data/Gleaning_Annotation/Annotations/v3.5.2.tar.gz"
-			tar -xzvf v3.5.2.tar.gz
-			cd AnnotSV-3.5.2
-			make install-annotations-human
-		fi
 	fi
 
 
@@ -244,7 +236,7 @@ fi
 
 
 echo "Project №2"
-echo "The Comprehensive Analysis of Provided Regular and Cancerous RNA Samples of Patient №14"
+echo "The Comprehensive Analysis Pipeline of Provided Regular and Cancerous RNA Samples of Patient №14"
 echo "Authors: Andrii Popovych and Mykhailo Chepara"
 
 
@@ -294,8 +286,8 @@ if [[ "$*" == *"-p"* ]]; then
 
 
 		#Synchronize both sample pairs
+		#Meaning get rid of all reads that don't have a pair in the coherent sample
 		echo "Mini-Synchronization Stage"
-		#meaning get rid of all reads that don't have a pair in the coherent sample
 
 		#create temp_sync dir if non-existent
 		mkdir -p $HOME/Data/Data_QC/temp_sync
@@ -639,21 +631,12 @@ if [[ "$*" == *"-p"* ]]; then
 			--output-file-format MAF
 
 
-		gatk Funcotator \
-			-R "$HG_38" \
-			-V "$CNV_VC" \
-			-O "$CNV_MAF" \
-			--data-sources-path "$FUNC_DB" \
-			--ref-version hg38 \
-			--output-file-format MAF
-
-
 	fi
 
 
 	if [[ "$*" == *"7"* ||  "$*" == *"0"* ]]; then
 		echo "Reporting Stage"
-		echo "The stage is conducted, but the results are saved into "
+		echo "The stage is conducted by analyzing annotated files and preserving actual information into txt files. Later on the final analysis report file is made from existing reports rendered from previous stages."
 	fi
 
 fi
