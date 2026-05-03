@@ -1,0 +1,35 @@
+DUPLICATION ANALYSIS REPORT - PATIENT 14
+CONTROL SAMPLE (P14_C_LB)
+
+Total read pairs examined: 11,958,529  
+
+Read pair duplicates: 1,484  
+
+Unpaired reads examined: 6,317  
+
+Unpaired duplicates: 2,282  
+
+Optical duplicates: 12  
+
+Percent duplication: 0.000219 (approx. 0.022%)  
+
+Estimated library size: 48,571,465,066  
+
+TUMOR SAMPLE (P14_T_LB)
+
+Total read pairs examined: 17,303,135  
+
+Read pair duplicates: 1,659  
+
+Unpaired reads examined: 8,521  
+
+Unpaired duplicates: 3,421  
+
+Optical duplicates: 12  
+
+Percent duplication: 0.000195 (approx. 0.020%)  
+
+Estimated library size: 90,886,176,860  
+
+TECHNICAL SUMMARY
+The duplication analysis performed via MarkDuplicatesSpark indicates exceptionally low levels of redundancy in both sequencing libraries. The control sample shows a duplication rate of approximately 0.022%, while the tumor sample is even lower at 0.020%. These metrics suggest a high-complexity library where nearly every sequenced fragment is unique. Optical duplicates, which represent clusters misidentified as multiple signals on the flow cell, were identical for both samples at 12 reads each, indicating consistent and high-quality instrument performance. The estimated library size for the tumor sample is significantly larger, nearing 91 billion, compared to the 48.5 billion estimated for the control.

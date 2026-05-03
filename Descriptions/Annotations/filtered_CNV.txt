@@ -1,0 +1,12 @@
+,Location,Consequence,IMPACT,SYMBOL,Gene,ClinVar_SV,ClinVar_SV_CLNSIG,ClinVar_SV_CLNACC
+0,10_KN196480v1_fix:92599-138898,intron_variant,MODIFIER,KAT6B,ENSG00000281813,-,-,-
+7,10_KN196480v1_fix:92599-138898,"intron_variant,NMD_transcript_variant",MODIFIER,KAT6B,ENSG00000281813,-,-,-
+9,10_KN196480v1_fix:92599-138898,"intron_variant,non_coding_transcript_variant",MODIFIER,KAT6B,ENSG00000281813,-,-,-
+14,10_KN196480v1_fix:92599-138898,"coding_sequence_variant,3_prime_UTR_variant,intron_variant,NMD_transcript_variant",MODIFIER,KAT6B,ENSG00000281813,-,-,-
+1675,20_MU273389v1_fix:152456-304912,transcript_ablation,HIGH,SRC,ENSG00000291971,-,-,-
+1676,20_MU273389v1_fix:152456-304912,"feature_truncation,coding_sequence_variant,5_prime_UTR_variant,intron_variant",HIGH,SRC,ENSG00000291971,-,-,-
+1684,20_MU273389v1_fix:152456-304912,"feature_truncation,non_coding_transcript_exon_variant,intron_variant",HIGH,SRC,ENSG00000291971,-,-,-
+1685,20_MU273389v1_fix:152456-304912,upstream_gene_variant,MODIFIER,SRC,ENSG00000291971,-,-,-
+1786,22:12539703-22009451,transcript_amplification,HIGH,MAPK1,ENSG00000100030,-,-,-
+1976,22:12539703-22009451,transcript_amplification,HIGH,CLTCL1,ENSG00000070371,-,-,-
+1993,22:12539703-22009451,transcript_amplification,HIGH,LZTR1,ENSG00000099949,-,-,-

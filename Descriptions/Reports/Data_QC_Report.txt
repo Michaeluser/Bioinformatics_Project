@@ -1,0 +1,75 @@
+PRE-TRIMMING DATA QUALITY CONTROL REPORT (DETAILED)
+
+Control sample R1
+Per base sequence quality: The quality profile shows a typical pattern for raw sequencing data. The average Phred score remains above 30 across the entire read length, indicating generally reliable base calls. Minor degradation is observed at the beginning and end of reads, which is consistent with sequencing initialization and signal decay effects.
+Per tile quality: The heatmap indicates predominantly uniform sequencing performance across tiles. Only minor localized fluctuations are visible, suggesting no systematic technical bias.
+Per sequence quality scores: The distribution is negatively skewed with a dominant peak at high-quality values and no secondary peaks at low scores, indicating a consistently high-quality read population.
+Per base sequence content: Initial base composition is uneven due to hexamer priming bias, but stabilizes rapidly, approaching an approximately uniform distribution across all bases.
+Per base N content: No undefined bases are present, confirming accurate base calling.
+Sequence length distribution: All reads are uniformly 101 base pairs, indicating consistent sequencing output.
+Sequence duplication levels: The duplication rate is 17.64%, slightly exceeding the expected threshold, suggesting moderate redundancy.
+Adapter content and overrepresented sequences: No adapter contamination or overrepresented sequences are detected.
+GC content: The distribution is bimodal and shifted, suggesting potential contamination despite acceptable sequencing quality.
+
+Control sample R2
+Per base sequence quality: The average Phred score remains above 30; however, a noticeable decline in median quality is observed toward the end of reads, indicating the presence of low-quality bases.
+Per tile quality: Specific tiles (1101, 1201, 1301) exhibit reduced quality, indicating localized sequencing inconsistencies.
+Per sequence quality scores: The distribution contains a secondary peak at very low quality (approximately Q2), indicating a subset of unreliable reads.
+Per base sequence content: Base composition stabilizes after approximately 15 base pairs, with minor deviations likely caused by sequencing inaccuracies.
+Per base N content: No undefined bases are present.
+Sequence length distribution: Reads are consistently 101 base pairs.
+Sequence duplication levels: The duplication rate is 12.43%, which falls within the acceptable range.
+Adapter content and overrepresented sequences: None detected.
+GC content: The distribution is bimodal with moderate deviation, suggesting contamination rather than purely technical artifacts.
+
+Tumor sample R1
+Per base sequence quality: The average Phred score exceeds 32 throughout the read, indicating high sequencing accuracy with only minor expected edge effects.
+Per tile quality: No significant tile-related issues are observed, suggesting stable sequencing conditions.
+Per sequence quality scores: The distribution is tightly clustered with a peak around Q38, indicating a high proportion of high-quality reads.
+Per base sequence content: Base composition remains stable across the read, with only minor expected variations and no abnormal spikes.
+Per base N content: No undefined bases are present.
+Sequence length distribution: All reads are 101 base pairs.
+Sequence duplication levels: The duplication rate is 18.49%, relatively high, potentially reflecting biological or technical redundancy.
+Adapter content and overrepresented sequences: None detected.
+GC content: The distribution is irregular and deviates from a Gaussian profile, suggesting underlying biological variation rather than contamination.
+
+Tumor sample R2
+Per base sequence quality: The average Phred score remains above 32, with a slight decline toward the end of reads, consistent with expected sequencing behavior.
+Per tile quality: Similar to Control R2, tiles 1101, 1201, and 1301 show reduced quality, indicating localized technical issues.
+Per sequence quality scores: A minor low-quality peak (around Q2) is present, indicating a subset of poor-quality reads.
+Per base sequence content: Base composition is stable throughout the read, with no significant irregularities.
+Per base N content: No undefined bases are detected.
+Sequence length distribution: All reads are consistently 101 base pairs.
+Sequence duplication levels: The duplication rate is 14.73%, within acceptable limits.
+Adapter content and overrepresented sequences: None detected.
+GC content: The distribution is irregular and non-Gaussian, consistent with tumor-related genomic variation rather than sequencing artifacts.
+
+Global observations
+Across all samples, reduced quality at read ends is consistently observed, which is characteristic of raw sequencing data. No undefined bases, adapter contamination, or overrepresented sequences are present. Read lengths are uniform across all datasets. GC content deviations indicate likely contamination in control samples and biological variation in tumor samples.
+
+
+POST-TRIMMING DATA QUALITY CONTROL REPORT
+
+Control sample R1
+Per base sequence quality: The trimming process has successfully homogenized the read quality. The average Phred score now remains strictly above 32 across the entire 101 bp length, with the median scores for the majority of the read sitting between 38 and 40. The "drop" at the end of the read has been effectively mitigated.
+Per sequence quality scores: The distribution is now excellently skewed to the right, with a sharp peak at a mean Phred score of 38. There are virtually no reads with an average quality below 25, indicating a very "clean" library in terms of sequencing accuracy.
+Per base sequence content: The fluctuations at the start of the read (positions 1-9) have stabilized compared to raw data. While minor variations from the random hexamer priming are still visible, the four bases reach a near-perfect 25% equilibrium almost immediately, suggesting that the most problematic biased starts were removed.
+Per sequence GC content: Interestingly, the bimodal distribution you identified in the pre-trimming report persists. The observed GC curve still shows a distinct "shoulder" or secondary peak around 42%, deviating from the theoretical Gaussian curve centered at 55%. Since the read quality is now near-perfect, this confirms your earlier hypothesis: this bimodal signature is likely due to biological contamination rather than sequencing errors.
+
+Control sample R2
+Per base sequence quality: The "poor quality" at the end of the reads mentioned in the pre-trimming report has been successfully resolved. The median Phred score now stays above 32 for the entire read length. While there is a slight downward trend toward the final bases, the scores remain firmly within the "green" high-quality zone, removing the risk of alignment artifacts.
+Per sequence quality scores: The concerning spike of ~500,000 low-quality reads at a Phred score of 2 has been completely eliminated. The distribution shown in per sequence quality graph is now unimodal and sharply peaked at a mean quality of 38, confirming that the "concerning" subset of sequences was successfully filtered out.
+Per base sequence content: According to per base sequence content graph, the base ratios have stabilized significantly. The initial positional bias from hexamer priming is still present in the first 7-9 base pairs but quickly flattens to the expected 25% distribution. The small parallel deviations and spikes noted before trimming have been smoothed out.
+Per sequence GC content: Similar to C_R1, the bimodal distribution persists in the graph A distinct secondary summit is visible at approximately 42% GC content, while the main peak aligns closer to the theoretical 55% mark. This confirms that the bimodal nature is a characteristic of the sample itself (likely contamination) rather than a result of poor sequencing quality that could be "fixed" by trimming.
+
+Tumor sample R1
+Per base sequence quality: Post-trimming, the sample maintains an impressively high quality. According to the graph, the average Phred score remains above 34 for the entire read length, with the median consistently hitting the maximum score of 40 for a significant portion of the read. This confirms the "moderately high quality" you noted in the pre-trimming phase has been further polished.
+Per sequence quality scores: As shown in the graph, the distribution is incredibly tight and unimodal. The peak has shifted firmly to a mean Phred score of 38, with almost no reads falling into lower-quality categories. This indicates that the library consists of highly accurate reads.
+Per base sequence content: The analysis on the graph  shows a very stable distribution. While the expected minor fluctuations from hexamer priming are visible in the first 10 bp, the base composition settles into a remarkably flat line for the remainder of the read. This suggests that any sequencing-related artifacts at the start of the reads have been minimized.
+Per sequence GC content: This is the most critical observation for this sample. Even with perfect read quality, the distribution on the graph remains jagged and non-Gaussian, failing the FastQC check. The curve shows multiple summits and "bumps" around the 40–55% range. As you theorized earlier, because the technical quality is now so high, these deviations strongly suggest that the sequence content itself is unusual—likely reflecting the genomic instability or structural variations inherent in a tumor sample.
+
+Tumor sample R2
+Per base sequence quality: The trimming has effectively addressed the quality concerns at the read ends. As shown on the graph, the average Phred score remains strictly above 32 throughout the 101 bp read. The median score is remarkably high, staying at 40 for the first half of the read and only tapering slightly to 34 by the very end, placing the entire sample firmly in the green "high-quality" zone.
+Per sequence quality scores: The concerning left-side spike of low-quality reads (average Q=2) mentioned in the pre-trimming report has been entirely removed. The distribution shown on the graph is now unimodal and extremely sharp, peaking at a mean Phred score of 38. This confirms that all significantly degraded sequences were successfully filtered out during processing.
+Per base sequence content: The base composition is very stable. Beyond the initial 10 bp—where hexamer priming creates the expected minor fluctuations—the percentages of A, T, C, and G remain flat and parallel. There are no abnormal spikes, indicating that the technical artifacts from the sequencing library preparation have been minimized.
+Per sequence GC content: Despite the near-perfect sequencing quality, the GC distribution remains bimodal and fails the Gaussian theoretical fit. The curve shows a primary summit near 41% and a significant secondary peak/shoulder around 50-55%. Since the quality trimming did not "clean" this curve into a standard bell shape, this validates your earlier hypothesis: these irregularities are not technical errors but represent a true biological signal, likely the aneuploidy or significant genomic modifications typical of tumor cells.

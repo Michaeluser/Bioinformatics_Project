@@ -1,0 +1,277 @@
+CNV Annotation
+
+Variants in total: 46
+Gene quantity: 1097
+Overlapped transcripts: 5551
+Overlapped regulatory features: 1228
+
+
+----------HAZARDOUS VARIANTS----------
+
+Gene Symbol: H19
+Full Name: H19 imprinted maternally expressed transcript
+Variant: chr11:1995165-2004552
+Consequence: Transcript_Ablation
+Contemplated Frequency: 0.000057
+Gene Function: The product of this gene is a long non-coding RNA which functions as a tumor suppressor. So if it is damaged there is a possibility of tumor creation.
+Clinical Significance: Pathogenic
+Notes: Mutations in this gene have been associated with Beckwith-Wiedemann Syndrome and Wilms tumorigenesis. Further noticed the fact that in some of the studies this particular variant was examined as one of the potential ones that might drive developmental delay and intellectual disability in children.
+
+Gene Symbol: SYT8
+Full Name: synaptotagmin 8
+Variant: chr11:1919456-1938711
+Consequence: Transcript_Ablation
+Contemplated Frequency: NA
+Gene Function: In the pancreas, SYT8 is specifically connected to the insulin gene promoter. It acts as a bridge that links the body's response to glucose with the physical secretion of insulin.
+Clinical Significance: Likely_Pathogenic
+Notes: Loss of SYT8 likely disrupts the fine-tuned insulin secretion pathway in the pancreas, since it acts as a bridge for secretion of hormone like molecules, and when it's gone the process would be disrupted.
+
+Gene Symbol: KAT6B
+Full Name: lysine acetyltransferase 6B
+Variant: chr10:74824912-75032631
+Consequence: Non_Coding_Transcript_Variant, Coding_Sequence_Variant, 3_Prime_UTR_Variant, Intron_Variant, NMD_Transcript_Variant
+Contemplated Frequency: NA
+Gene Function: KAT6B is a histone acetyltransferase. It aids in regulation of "tightness" of DNA around histones, the acetyl group specifically regulates how close DNA is located around histones so that it can be read during either duplication or transcription. It is especially important during the development of the brain, face, and skeleton. It helps ensure the right genes are activated at the right time to build these structures correctly. It can cause Genitopatellar syndrome, which primarily affects the knees (kneecaps), hips, and certain organs. Moreover, it can cause Say-Barber-Biesecker-Young-Simpson (SBBYSS) syndrome, leading to distinct facial features, heavy eyelids (ptosis), and developmental delays. Because of the fact that NMD_Transcript_Variant is present it is likely to cause loss of function. Because of the fact that KAT6B's pLI score is 1.0 it's completely intolerant to loss of function and can cause a disease, it's classified as likely pathogenic.
+Clinical Significance: Likely_Pathogenic
+
+Gene Symbol: SRC
+Full Name: SRC proto-oncogene, non-receptor tyrosine kinase
+Variant: chr20:37344673-37406050
+Consequence: Transcript_Ablation, Feature_Truncation, Coding_Sequence_Variant, 5_Prime_UTR_Variant, Intron_Variant, Non_Coding_Transcript_Exon_Variant, Upstream_Gene_Variant
+Contemplated Frequency: NA
+Gene Function: The gene acts as a tyrosine kinase and commands other proteins to activate, it's an activation gene, it manages cell's division rate, moving direction and controls self-destruct mechanism of a cell. Mostly it sends signals. An essential controller that tells cells when to grow, move, and stay alive. It is vital for things like bone health and embryonic development. The diseases that the gene can cause are following:
+malignant progression, SRC acts as an "accelerant", meaning mutations help a small, harmless polyp turn into an invasive, dangerous tumor. Metastasis disease, SRC is heavily involved in "cell motility" - mutations in this gene often allow colon cancer cells to break away and travel to the liver (PubMed 9988270). Because of the fact that we have transcript ablation sort of consequence, we can say that most probably a person would get one of the diseases, but we don't know which exactly since those aformentioned ones are connected with overexpression and/or activation of the gene. Whereas in this case it's partially sliced off, feature truncation, which means that some part of the functional part of the copy was cut off. Another copy of the gene was deleted completely. And since its pLI score is 1.0 and pHaplo is 0.73 the patient is more likely to get some sort of disease from that.
+Clinical Significance: Likely_pathogenic
+
+
+
+
+
+----------HARMLESS VARIANTS----------
+
+Gene Symbol: SYT15B
+Full Name: synaptotagmin 15B
+Variant: chr11:1828307-1837521
+Consequence: Transcript_Ablation
+Contemplated Frequency: 0.02857
+Gene Function: Predicted to be involved in regulation of calcium ion-dependent exocytosis and vesicle-mediated transport
+Clinical Significance: Likely_Benign
+Notes: During comparison with similar CNV variants found in DECIPHER the variants had much larger difference in size than current sample, henceforth samples were incomparable. Was observed in a general sequencing study (not clearly disease-specific), not implying involving of sick people.
+
+Gene Symbol: LSP1
+Full Name: lymphocyte specific protein 1
+Variant: chr10:1853084-1892263
+Consequence: Transcript_Ablation
+Contemplated Frequency: NA
+Gene Function: LSP1 encodes a protein mainly found in white blood cells. It helps to regulate cell shape, cell movement, immune cell migration and adhesion.
+Clinical Significance: Likely_Benign
+Notes: The variant was taken from control set indirectly saying that the group of people was generally healthy and this can be a rare mutation. DECIPHER didn't have any variants similar in size to the current one, so we leave out its results and will focus instead on genes tolerance scores. No single well-established inherited disease is directly caused by LSP1 mutations in a Mendelian way. Additionally, the gene is immune to decrease in number of copy variations, so the variant might be rare and benign, since there aren't any diseases connected to it and it's tolerant to loss, meaning leaning to benign.
+
+Gene Symbol: CLTCL1
+Full Name: clathrin heavy chain like 1
+Variant: chr22:19179320-19291774
+Consequence: Transcript_Amplification
+Contemplated Frequency: NA
+Gene Function: Gene is used for transport of proteins inside of the cell, and acts as a distribution protein that delivers with itself proteins in-between points in the cell. An example might be the transport of GLUT4, the CLTCL1 acts as a glucose transporter protein here, it's one of its primary roles. Because of the fact that pTriplo score is 0.35 which is moderately low we can safely assume that another copy of an existing variant won't hurt much and so clinical significance is presumed to be likely benign
+Clinical Significance: Likely_Benign
+
+Gene Symbol: LZTR1
+Full Name: leucine zipper like post translational regulator 1
+Variant: chr22:20982223-20999035
+Consequence: Transcript_Amplification
+Contemplated Frequency: NA
+Gene Function: The main role of the gene is managing size and shape of the organs during embryonic growth period. Mostly it interacts with proteins of RAS family which act as On/Off switches providing organism with needed mechanism for regulation of growing tissues. Because of the fact that gene itself is a regulator and pDN score is 0.607, pTriplo score is 0.4 we can't say that it's problematic and can cause any pathologies, henceforth the clinical significance is likely benign. Additionally, the diseases linked with this gene are mostly about either its complete eradication or modification, because of that it's considered to be most likely harmless.
+Clinical Significance: Likely_Benign
+
+
+
+
+
+----------UNCERTAIN SIGNIFICANCE VARIANTS----------
+
+Gene Symbol: GPRIN2
+Full Name: G protein regulated inducer of neurite outgrowth 2
+Variant: chr10:46541736-46557596
+Consequence: Transcript_Ablation
+Contemplated Frequency: 0.001094
+Gene Function: Predicted to be involved in neuron projection development, neurite outgrowth in simple words.
+Clinical Significance: VUS
+Notes: Variant of Uncertain Significance. Was observed in general study mentioning control set, implying no unhealthy set of people was chosen for the experiment. Since most of the patient variants on DECIPHER are having larger size than current ones, we can't reliably tell whether the variant is harmful or not. Judging on the pLI score no loss of function would occur under deletions of the gene. There is no well-established Mendelian disease caused by mutations in this gene, yet it has not been proven to cause any disease, therefore VUS.
+
+Gene Symbol: LOC102724593
+Full Name: uncharacterized LOC102724593
+Variant: chr10:47743699-47759041
+Consequence: Transcript_Ablation
+Contemplated Frequency: NA
+Gene Function: NA
+Clinical Significance: VUS
+Notes: Variant of Uncertain Significance. The study was done on a general group of people indirectly saying that the variation might not be tumorous. Since none of the variants in DECIPHER match current variant the comparison can't be conducted. The variant can't be found in DECIPHER meaning the specimen might be a variant of uncertain significance.
+
+Gene Symbol: MAPK1 
+Full Name: mitogen-activated protein kinase 1
+Variant: chr22:21755537-21867680
+Consequence: Transcript_Amplification
+Contemplated Frequency: NA
+Gene Function: MAPK1 acts as a messanger. It enters the nucleus of the cell and tells the DNA exactly which genes to turn on or off. It's used for cell division, differentiation, meaning classification and transformation of plain stem cells into a specific type, and synaptic placticity for use to form new memories in the brain. Since we have transcript amplification as a consequence, that categorizes as a gain of function type of event, the there would be more proteins than expected. This drives the growth of tumors, particularly in the lungs, colon, and skin (melanoma). The triplosensitivity score is 1.0 which gives little evidence of having a disease from it. Henceforth the variant is grouped as VUS.
+Clinical Significance: VUS
+
+
+
+
+
+
+
+
+
+
+SV Annotation
+
+
+Variants in total: 
+Gene quantity: 
+Overlapped transcripts: 
+Overlapped regulatory features: 
+
+
+----------HAZARDOUS VARIANTS----------
+
+Gene Symbol: CDH23
+Full Name: cadherin related 23
+Variant: chr10:71396920-71815947
+Consequence: Feature_Truncation, Coding_Sequence_Variant
+Contemplated Frequency: NA
+Gene Function: In the eye, it helps maintain the structure of the retina's light-sensing cells. One of the functions of this gene is helping in "adhesion" of the cells, so the can form in a specific way in organized patterns. Also it aids in building "tip links" in the ear which are used to convert physical sound waves into electrical signals. If it's missing or truncated the following illnesses might occur: Usher 1D, DFNB12 and Presbycusis. The disease that might occur depends on severity of gene mutation. Since we have gene truncation for both copies of the gene have truncating mutation, it means that specimen most probably would have Usher 1D, which is accompained by deafness, blindness and balance issues. Still concurrently the person might just have DFNB12 if one of the gene copies is partially functional. So the most likely clinical significance is Pathogenic, it's supported by ClinVar_SV_CLNSIG column, where most of the values are pathogenic as well.
+Clinical Significance: Pathogenic
+
+Gene Symbol: ANK3
+Full Name: ankyrin 3
+Variant: chr10:60026298-60733490
+Consequence: Feature_Truncation, Coding_Sequence_Variant
+Contemplated Frequency: NA
+Gene Function: ANK3 encodes a protein called Ankyrin-G, that is used as an adhesion point between potassium and sodium channels in neurons together and in the correct sports. It can cause a spectre of diseases it mutated, the most prominent one is related to Intellectual Disability and Sleep Syndrome.  This causes person difficulties in falling or stayin asleep, moderate to severe intellectual disability, muscle motor problems and a couple of other symptoms. Because of the fact that most healthy people don't have broken version of this gene we can assume that it's most likely pathogenic. That is supported by the ClinVar_SV_CLNSIG and PHENOTYPES columns of the annotated variants. So the most probable clinical significance of this truncated gene is pathogenic.
+Clinical Significance: Pathogenic
+
+Gene Symbol: ITGA3
+Full Name: integrin subunit alpha 3
+Variant: Feature_Truncation, Coding_Sequence_Variant	
+Consequence: chr17:50055968-50090485
+Contemplated Frequency: NA
+Gene Function: It is essential for holding the layers of the skin together and for the kidneys' filtration process too. It pairs with a beta 1 subunit to form a receptor that sticks cells to the basement membrane, proving its usefulness in adhesion of cells. Interstitial Lung Disease, Nephrotic Syndrome, and Epidermolysis Bullosa or otherwise said ILNEB Syndrome is the primary illness triggered by truncation of both copies of the gene. The syndrome has symptoms such as severe blistering from birth, potential kidney failure and respiratory distress. Thus the most probable significance level is pathogenic.
+Clinical Significance: Pathogenic
+
+Gene Symbol: KDM1A
+Full Name: lysine demethylase 1A
+Variant: chr1:23019395-23083693
+Consequence: Feature_Truncation
+Contemplated Frequency: NA
+Gene Function: It's mostly used in gene silencing and cell transformation. During gestation period it's used to organized the way fetus should form. Critically needed for production of bone marrow and red blood cells. It can cause Multiple Congenital Anomalies-Hypotonia-Seizures Syndrome, MCAHS4 Syndrome, in case of biallelic truncation. pLOF is pretty high (0.709), meaning the affected copy might just be not useful at all, which in return means only one of the alleles is present. pHaplo score is 0.98, meaning that if there is only one copy of a gene, the disease would likely follow. Verdict - likely pathogenic mutation.
+Clinical Significance: Likely_Pathogenic
+
+----------HARMLESS VARIANTS----------
+
+Gene Symbol: ABCC3
+Full Name: ATP binding cassette subfamily C member 3
+Variant: chr17:50634609-50692631
+Consequence: Feature_Truncation, Intron_Variant
+Contemplated Frequency: NA
+Gene Function: Its job is to move organic anions - including bile salts, drugs, and toxins - out of the cell and into the bloodstream. When bile duct is blocked, the gene "pumps" bile acids back into the blood so kidneys can later filter them out. It transports toxins and drugs out of liver cells. The diseases associated with this gene  and consequence being loss of function are following: jaundice. Since it can lead jaundice as a medical condition it is classified as pathogenic, but this particular variant most likely wouldn't lead to any serious diseases. Because of the fact that jaundice is a symptom and no known diseases are listed in neither Ensemble nor DECIPHER the variant has most likely benign significance.
+Clinical Significance: Likely_Benign
+
+
+
+
+----------UNCERTAIN SIGNIFICANCE VARIANTS----------
+
+Gene Symbol: CABCOCO1
+Full Name: ciliary associated calcium binding coiled-coil 1
+Variant: chr10:61662929-61766845
+Consequence: Feature_Truncation, Intron_Variant
+Contemplated Frequency: NA
+Gene Function: It plays a vital role in the movement of cilia - the microscopic, hair-like structures on the surface of cells. Also it's used in sperm cells. It is largely located inside of the flagellum of a sperm cell and, essentially controlls the way tail moves, so the cell can move. It is also used as a "docking station" for other proteins, in other words the other proteins can organize themselves in a specific way on top of it, during some sort of process. The disease that can be caused by truncation of the gene is male infertility, a.k.a Asthenozoospermia. But since there are no diseases that were confirmed by studies we would put it into VUS category.
+Clinical Significance: VUS
+
+Gene Symbol: CNTLN
+Full Name: centlein
+Variant: chr9:17134982-17503923
+Consequence: Feature_Truncation, Intron_Variant
+Contemplated Frequency: NA
+Gene Function: It ensures that the two centrioles stay properly linked until it is exactly the right time for them to separate. It helps in organization of spindle fibers so when dividing chromosomes don't accidentally divide unevenly. It also helps in building the base fo cilia. Since no diseases were found for the current gene but the truncation is still present this can be classified as VUS.
+Clinical Significance: VUS
+
+
+
+
+
+
+SNV and Indel Annotation
+
+
+Variants in total: 
+Gene quantity: 
+Overlapped transcripts: 
+Overlapped regulatory features: 
+
+
+----------HAZARDOUS VARIANTS----------
+
+Gene Symbol: SEC63
+Variant: chr6:107893551-107893560
+Consequence: frameshift_variant
+Contemplated Frequency: 99.279% pretty frequent
+Explanation: Most probable disease is Polycystic liver disease 2. The disease has symptoms of liver pressing on other organs, causing shortness of breath, early satiety (feeling full quickly), and back pain.
+Possible Implications: NA
+Clinical Significance: Likely_Pathogenic
+
+
+
+
+
+----------HARMLESS VARIANTS----------
+
+Gene Symbol: MKI67
+Variant: chr10:128106848-128106862
+Consequence: Frameshift_Variant
+Contemplated Frequency: 97.843% > 1% meaning it's generic
+Possible Implications: NA
+Clinical Significance: Likely_Benign
+
+
+
+
+
+----------UNCERTAIN SIGNIFICANCE VARIANTS----------
+
+Gene Symbol: MYOC
+Variant: chr1:171636626
+Consequence: Stop_Gained
+Contemplated Frequency: 0.001027% < 1% meaning it's ultra rare
+Possible Implications: NA
+Explanation: Since exact match doens't exist in ClinVar we can quire infer from that some sort of disease, thus uncertain significance
+Clinical Significance: VUS
+
+Gene Symbol: F2
+Variant: chr11:46726628
+Consequence: Splice_Donor_Variant
+Contemplated Frequency: 0.06207% < 1%, worth examining
+Explanation: Since variant wasn't found in ClinVar, and most of the values in ClinVar_SV_CLNSIG column say pathogenic while some uncertain significance, we can't quite conclude where this variant belongs to
+Possible Implications: NA
+Clinical Significance: VUS
+
+
+
+Gene Symbol: CIB1
+Variant: chr15:90229975-90233941
+Consequence: Start_Lost
+Contemplated Frequency: 0.003253% < 1%, pretty rare
+Explanation: The current variant was abandoned, since there weren't any records about it in ClinVar, thus VUS
+Possible Implications: NA
+Clinical Significance: VUS
+
+
+Gene Symbol: SLC12A3
+Variant: chr16:56886516
+Consequence: Stop_Gained
+Contemplated Frequency: 0.0006598% < 1%, meaning it's super ultra rate	
+Explanation: The variant is not in ClinVar, VUS is assigned
+Possible Implications: NA
+Clinical Significance: VUS
